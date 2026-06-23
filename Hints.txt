@@ -1,0 +1,6 @@
+pyinstaller --noconsole --onedir --icon="my_logo.ico" "T-Office Entries.py"
+
+pyinstaller --noconsole --onedir --icon="my_logo.ico" --name="T-Office Entries" --hidden-import PIL --hidden-import PIL.Image --hidden-import PIL.ImageTk --hidden-import PIL.ImageDraw --hidden-import openpyxl --hidden-import docx --optimize=2 "T-Office Entries.py"
+
+git add . && git commit -m "Added a New file" && git push origin main
+

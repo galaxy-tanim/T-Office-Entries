@@ -471,10 +471,9 @@ class DigitEntryApp:
             file_part = "\U0001f4c4 " + fname
             available = approx_chars - len(left_part) - right_reserved - len(file_part)
             pad_left  = max(2, available // 2)
-            pad_right = max(2, available - pad_left)
-            self.root.title(
-                f"{base_title}{separator}{' ' * pad_left}{file_part}{' ' * pad_right}"
-            )
+            padding = " " * (150 - len(file_part) // 2)
+            full_title = f"{base_title} {padding}{file_part}"
+            self.root.title(full_title)
         else:
             self.root.title(base_title)
     # ── Close handler ─────────────────────────────────────────────────────────
